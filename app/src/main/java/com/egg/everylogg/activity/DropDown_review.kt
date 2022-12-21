@@ -49,7 +49,7 @@ class DropDown_review : AppCompatActivity() {  //프래그먼트 전환 필요�
         val transaction = supportFragmentManager.beginTransaction()
         //3. 트랜잭션을 통해 프래그먼트 삽입
         //transaction.add(binding.ChangeLayout, reviewFragment)
-        //transaction.add(binding.ChangeLayout, reviewFragment)
+
         transaction.commit()
     }
 }

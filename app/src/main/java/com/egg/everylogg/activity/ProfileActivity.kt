@@ -4,15 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.egg.everylogg.R
-import com.egg.everylogg.databinding.ActivityMainBinding
+import com.egg.everylogg.databinding.ProfileScreenBinding
 
-class MainActivity : AppCompatActivity() {  //내정보 페이지 코드
+class ProfileActivity : AppCompatActivity() {  //내정보 페이지 코드
     val PERM_STORAGE = 9
     val PERN_CAMERA = 10
 
     val REQ_CAMERA = 11
 
-    val binding by lazy{ ActivityMainBinding.inflate(layoutInflater)}
+    val binding by lazy{ ProfileScreenBinding.inflate(layoutInflater)}
 
     override fun onCreate(savedInstanceState: Bundle?) {
 

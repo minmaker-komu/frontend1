@@ -3,7 +3,7 @@
     package="com.egg.everylogg">
     
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon_everylog"
@@ -20,7 +20,7 @@
             android:exported="false">
 
         </activity>
-        <activity android:name=".activity.MainActivity"
+        <activity android:name=".activity.ProfileActivity"
             android:exported="false">
 
         </activity>
