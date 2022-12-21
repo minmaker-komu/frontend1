@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fffbe2">
+
+    <LinearLayout
+        android:id="@+id/diaryWriteLayout"
+        android:layout_width="356dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="150dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/hashtagLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/writescreen_top"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <Button
+                android:id="@+id/DiaryWriteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/writescreen_btn"
+                android:fontFamily="@font/gangwon"
+                android:text="일기"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/ReviewWriteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/writescreen_btn"
+                android:fontFamily="@font/gangwon"
+                android:text="리뷰"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/TravelWriteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/writescreen_btn"
+                android:fontFamily="@font/gangwon"
+                android:text="여행"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+
+            <Button
+                android:id="@+id/StudyWriteBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/writescreen_btn"
+                android:fontFamily="@font/gangwon"
+                android:text="공부"
+                android:textColor="@color/black"
+                android:textSize="22dp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0.1dp"
+            android:background="@drawable/writescreen_middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/editTextTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="48sp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:fontFamily="@font/gangwon"
+                    android:hint="제목"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#bcbcbc"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="210dp"
+                    android:layout_height="270dp"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/writescreen_thumbnail"
+                        android:clipChildren="false"
+                        android:clipToPadding="false" />
+
+                    <EditText
+                        android:id="@+id/editDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="10"
+                        android:fontFamily="@font/gangwon"
+                        android:hint="2022.05.05 ~ 2022.05.08"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textColorHint="#bcbcbc"
+                        android:textSize="20sp" />
+
+                    <me.relex.circleindicator.CircleIndicator3
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        app:ci_drawable="@drawable/gray_indicator">
+
+                    </me.relex.circleindicator.CircleIndicator3>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/editTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:ems="10"
+                    android:fontFamily="@font/gangwon"
+                    android:hint="&quot;\n여행 한 줄 정리\n&quot;"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#bcbcbc"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/editContext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:fontFamily="@font/gangwon"
+                    android:hint="여행 간략 전개"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textColorHint="#bcbcbc"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/hashtagLayout"
+        android:layout_width="356dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/writescreen_bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/diaryWriteLayout"
+        app:layout_constraintBottom_toTopOf="@+id/diaryWritesubmitBtn">
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/diaryWritesubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="256dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="94dp"
+        android:text="완료"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hashtagLayout"
+        android:fontFamily="@font/gangwon"
+        android:textSize="22dp"
+        android:background="@drawable/btn_yellow"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.egg.everylogg">
+    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_everylog"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Everylogg">
+        <activity
+            android:name=".activity.StudyWriteActivity"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".activity.StudyListActivity"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".activity.MainActivity"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".activity.LoginActivity"
+            android:exported="false"/>
+        <activity android:name=".activity.StudyShowActivity"
+            android:exported="false">
+
+        </activity>
+        <activity android:name=".activity.SearchActivity"
+            android:exported="false"/>
+
+        <activity android:name=".activity.EditProfile"
+            android:exported="false"/>
+        <activity android:name=".activity.view_scene"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.write_scene"
+            android:exported="false"/>
+
+
+    </application>
+
+</manifest>
